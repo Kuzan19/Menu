@@ -1,0 +1,18 @@
+<li><a href="{% url 'category_page' category.slug">{{category.name}}</a>
+    <ul>
+        {% for sub in subcategory %}
+        {% if category.id == sub.category.id %}
+        <li class="subcategory"><a href="{% url 'subcategory_page' sub.slug %}">{{sub.name}}</a>
+            <ul>
+                {% for s in subcategory %}
+                {% if sub.id == s.parent.id %}
+                <li><a href="{% url 'subcategory_page' s.slug %}">{{s.name}}</a></li>
+                {% endif %}
+                {% endfor %}
+            </ul>
+        </li>
+        {% endif %}
+        {% endfor %}
+    </ul>
+</li>
+

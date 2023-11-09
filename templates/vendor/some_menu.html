@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block title %} {{subcategory.name}} {% endblock %}
+
+{% block content %}
+
+<h3> {{subcategory.name}} </h3>
+
+{% include "navigation.html" %}
+
+{% endblock %}

@@ -1,0 +1,13 @@
+{% load draw %}
+
+{% block content %}
+<header>
+  <a href="#" class="logo">SKEPASTOR</a>
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      {% draw_menu 'World of Warcraft' %}
+    </ul>
+  </nav>
+</header>
+{% endblock %}
